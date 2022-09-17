@@ -12,7 +12,7 @@ struct Account: View {
         ZStack {
             Color.blue
             
-            Image(systemName: "person2.fill")
+            Image(systemName: "person.fill")
                 .foregroundColor(Color.white)
                 .font(.system(size: 100.0))
         }
