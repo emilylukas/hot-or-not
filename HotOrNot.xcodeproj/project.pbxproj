@@ -18,6 +18,7 @@
 		B763376328D5CC9100C30F6C /* UploadOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763376228D5CC9100C30F6C /* UploadOutfit.swift */; };
 		B763376528D5CC9A00C30F6C /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763376428D5CC9A00C30F6C /* Calendar.swift */; };
 		B763376728D635AC00C30F6C /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763376628D635AB00C30F6C /* Splash.swift */; };
+		B763376A28D6538200C30F6C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763376928D6538200C30F6C /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B763376228D5CC9100C30F6C /* UploadOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadOutfit.swift; sourceTree = "<group>"; };
 		B763376428D5CC9A00C30F6C /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		B763376628D635AB00C30F6C /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		B763376928D6538200C30F6C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		B763373428D597DB00C30F6C /* HotOrNot */ = {
 			isa = PBXGroup;
 			children = (
+				B763376828D6537200C30F6C /* Camera */,
 				B763375F28D5CC5B00C30F6C /* Views */,
 				B763373528D597DB00C30F6C /* HotOrNotApp.swift */,
 				B763373728D597DB00C30F6C /* ContentView.swift */,
@@ -145,6 +148,14 @@
 				B763376628D635AB00C30F6C /* Splash.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B763376828D6537200C30F6C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				B763376928D6538200C30F6C /* ImagePicker.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B763373828D597DB00C30F6C /* ContentView.swift in Sources */,
+				B763376A28D6538200C30F6C /* ImagePicker.swift in Sources */,
 				B763376328D5CC9100C30F6C /* UploadOutfit.swift in Sources */,
 				B763373628D597DB00C30F6C /* HotOrNotApp.swift in Sources */,
 				B763376128D5CC8300C30F6C /* Account.swift in Sources */,
