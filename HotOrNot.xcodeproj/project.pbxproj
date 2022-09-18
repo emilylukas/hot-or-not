@@ -27,6 +27,7 @@
 		B763378028D6A7EA00C30F6C /* OutfitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377F28D6A7EA00C30F6C /* OutfitImage.swift */; };
 		B7C4041028D6B3D7003B9FD3 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4040F28D6B3D7003B9FD3 /* SmallButton.swift */; };
 		B7C4041228D6D366003B9FD3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4041128D6D366003B9FD3 /* APIService.swift */; };
+		B7C4041A28D7224C003B9FD3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4041928D7224C003B9FD3 /* MultipartFormData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		B763377F28D6A7EA00C30F6C /* OutfitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitImage.swift; sourceTree = "<group>"; };
 		B7C4040F28D6B3D7003B9FD3 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
 		B7C4041128D6D366003B9FD3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B7C4041928D7224C003B9FD3 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			children = (
 				B763377F28D6A7EA00C30F6C /* OutfitImage.swift */,
 				B7C4041128D6D366003B9FD3 /* APIService.swift */,
+				B7C4041928D7224C003B9FD3 /* MultipartFormData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			files = (
 				B763373828D597DB00C30F6C /* ContentView.swift in Sources */,
 				B7C4041228D6D366003B9FD3 /* APIService.swift in Sources */,
+				B7C4041A28D7224C003B9FD3 /* MultipartFormData.swift in Sources */,
 				B763377D28D6A70700C30F6C /* RatingResult.swift in Sources */,
 				B763376A28D6538200C30F6C /* ImagePicker.swift in Sources */,
 				B763377528D6733B00C30F6C /* ImageSelector.swift in Sources */,
