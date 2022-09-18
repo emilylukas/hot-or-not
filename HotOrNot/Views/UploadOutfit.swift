@@ -36,8 +36,8 @@ struct UploadOutfit: View {
         isCurrentlyRated = true
         if (localUIImage != nil) {
             let postedImage: UIImage = localUIImage!
-            let imageData: Data = postedImage.jpegData(compressionQuality: 1)!
-            service.requestNativeImageUpload(image: postedImage) { [self] result in
+            //let imageData: Data = postedImage.jpegData(compressionQuality: 1)!
+            service.postRequest(image: postedImage) { [self] result in
                 switch result {
                 case .success(let result):
 
@@ -45,7 +45,9 @@ struct UploadOutfit: View {
                     DispatchQueue.main.async {
                         
                         // Update collection view content
-                        if result == "HOT" {
+                        print(result)
+                        print(type(of: result))
+                        if result.contains("HOT") || result == String("HOT") {
                             rating = 1
                         } else {
                             rating = 0
