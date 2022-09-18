@@ -20,7 +20,7 @@ struct ChooseOutfit: View {
     var body: some View {
         ImageSelector(
             title: "",
-            disabled: image != nil,
+            disabled: image?.image != nil,
             backgroundColor: Color.white,
             foregroundColor: Color.pink
         ) {

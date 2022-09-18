@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UploadOutfit: View {
     @State var outfitImg: OutfitImage? = OutfitImage(img: nil)
+    @State var localImage: Image? = nil
     @State var isUploaded = false
     @State var isCurrentlyRated = false
     @State var rating = 0
@@ -39,6 +40,12 @@ struct UploadOutfit: View {
         resetCam()
     }
     
+    func retakeOutfitAfterRate() {
+        self.shouldShowActionSheet = true
+        resetCam()
+        isCurrentlyRated = false
+    }
+    
     func saveOutfit() {}
     
     var body: some View {
@@ -48,19 +55,20 @@ struct UploadOutfit: View {
                     .font(.system(size:30.0))
                     .bold()
                     .frame(height: deviceHeight * 0.05, alignment: .top)
-                if outfitImg?.image == nil {
+                if localImage == nil {
                     ChooseOutfit(image: outfitImg, onUploadPicture: onUploadPic)
                 } else {
                     if isCurrentlyRated == false {
                         ConfirmOutfit(image: outfitImg, rate: rateOutfit, retake: retakeOutfit)
                     } else {
-                        RatingResult(image: outfitImg, result: rating, save: saveOutfit, retake: retakeOutfit)
+                        RatingResult(image: outfitImg, result: rating, save: saveOutfit, retake: retakeOutfitAfterRate)
                     }
                 }
             }
             .sheet(isPresented: $shouldShowImagePicker) {
                 ImagePicker(sourceType: .photoLibrary) { image in
                     self.outfitImg?.image = Image(uiImage: image)
+                    localImage = Image(uiImage: image)
                 }
             }
             .actionSheet(isPresented: $shouldShowActionSheet) { () -> ActionSheet in
