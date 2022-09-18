@@ -24,8 +24,9 @@
 		B763377928D6851100C30F6C /* ChooseOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377828D6851100C30F6C /* ChooseOutfit.swift */; };
 		B763377B28D68B6900C30F6C /* ConfirmOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377A28D68B6900C30F6C /* ConfirmOutfit.swift */; };
 		B763377D28D6A70700C30F6C /* RatingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377C28D6A70700C30F6C /* RatingResult.swift */; };
-		B763378028D6A7EA00C30F6C /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377F28D6A7EA00C30F6C /* Outfit.swift */; };
+		B763378028D6A7EA00C30F6C /* OutfitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377F28D6A7EA00C30F6C /* OutfitImage.swift */; };
 		B7C4041028D6B3D7003B9FD3 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4040F28D6B3D7003B9FD3 /* SmallButton.swift */; };
+		B7C4041228D6D366003B9FD3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4041128D6D366003B9FD3 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +67,9 @@
 		B763377828D6851100C30F6C /* ChooseOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseOutfit.swift; sourceTree = "<group>"; };
 		B763377A28D68B6900C30F6C /* ConfirmOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOutfit.swift; sourceTree = "<group>"; };
 		B763377C28D6A70700C30F6C /* RatingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingResult.swift; sourceTree = "<group>"; };
-		B763377F28D6A7EA00C30F6C /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		B763377F28D6A7EA00C30F6C /* OutfitImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitImage.swift; sourceTree = "<group>"; };
 		B7C4040F28D6B3D7003B9FD3 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
+		B7C4041128D6D366003B9FD3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +192,8 @@
 		B763377E28D6A7B200C30F6C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B763377F28D6A7EA00C30F6C /* Outfit.swift */,
+				B763377F28D6A7EA00C30F6C /* OutfitImage.swift */,
+				B7C4041128D6D366003B9FD3 /* APIService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -326,12 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B763373828D597DB00C30F6C /* ContentView.swift in Sources */,
+				B7C4041228D6D366003B9FD3 /* APIService.swift in Sources */,
 				B763377D28D6A70700C30F6C /* RatingResult.swift in Sources */,
 				B763376A28D6538200C30F6C /* ImagePicker.swift in Sources */,
 				B763377528D6733B00C30F6C /* ImageSelector.swift in Sources */,
 				B763376328D5CC9100C30F6C /* UploadOutfit.swift in Sources */,
 				B763373628D597DB00C30F6C /* HotOrNotApp.swift in Sources */,
-				B763378028D6A7EA00C30F6C /* Outfit.swift in Sources */,
+				B763378028D6A7EA00C30F6C /* OutfitImage.swift in Sources */,
 				B763377B28D68B6900C30F6C /* ConfirmOutfit.swift in Sources */,
 				B763376128D5CC8300C30F6C /* Account.swift in Sources */,
 				B763376728D635AC00C30F6C /* Splash.swift in Sources */,

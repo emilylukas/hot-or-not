@@ -12,11 +12,13 @@ struct UploadOutfit: View {
     @State var localImage: Image? = nil
     @State var isUploaded = false
     @State var isCurrentlyRated = false
-    @State var rating = 0
+    @State var rating = 1
     
     @State private var shouldShowImagePicker = false
     @State private var shouldShowActionSheet = false
     @State private var shouldShowCamera = false
+    
+    let service = APIService()
     
     func onUploadPic() {
         shouldShowActionSheet = true
@@ -31,8 +33,26 @@ struct UploadOutfit: View {
         self.shouldShowActionSheet = false
         resetCam()
         isCurrentlyRated = true
-        // Add API call here
-        rating = 1
+        service.postRequest { [self] result in
+            
+            switch result {
+            case .success(let result):
+
+                // Update UI using main thread
+                DispatchQueue.main.async {
+                    
+                    // Update collection view content
+                    if result == "HOT" {
+                        rating = 1
+                    } else {
+                        rating = 0
+                    }
+                }
+                
+            case .failure(let error):
+                print("Request failed with error: \(error)")
+            }
+        }
     }
     
     func retakeOutfit() {
@@ -46,7 +66,9 @@ struct UploadOutfit: View {
         isCurrentlyRated = false
     }
     
-    func saveOutfit() {}
+    func saveOutfit() {
+        // save outfit to calendar
+    }
     
     var body: some View {
         ZStack {
