@@ -93,9 +93,15 @@ struct UploadOutfit: View {
                     localImage = Image(uiImage: image)
                 }
             }
+            .sheet(isPresented: $shouldShowCamera) {
+                ImagePicker(sourceType: .camera) { image in
+                    self.outfitImg?.image = Image(uiImage: image)
+                    localImage = Image(uiImage: image)
+                }
+            }
             .actionSheet(isPresented: $shouldShowActionSheet) { () -> ActionSheet in
                     ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
-                        self.shouldShowImagePicker = true
+                        self.shouldShowImagePicker = false
                         self.shouldShowCamera = true
                     }), ActionSheet.Button.default(Text("Photo Library"), action: {
                         self.shouldShowImagePicker = true
