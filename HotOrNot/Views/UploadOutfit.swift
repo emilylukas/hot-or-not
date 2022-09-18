@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct UploadOutfit: View {
-    @State var outfitImg: OutfitImage? = nil
+    @State var outfitImg: OutfitImage? = OutfitImage(img: nil)
     @State var isUploaded = false
     @State var isCurrentlyRated = false
+    @State var rating = 0
     
     @State private var shouldShowImagePicker = false
     @State private var shouldShowActionSheet = false
@@ -30,6 +31,7 @@ struct UploadOutfit: View {
         resetCam()
         isCurrentlyRated = true
         // Add API call here
+        rating = 1
     }
     
     func retakeOutfit() {
@@ -37,42 +39,42 @@ struct UploadOutfit: View {
         resetCam()
     }
     
+    func saveOutfit() {}
+    
     var body: some View {
-        HStack {
-            ZStack {
-                VStack {
-                    Text("Upload your outfit")
-                        .font(.system(size:30.0))
-                        .bold()
-                        .frame(height: deviceHeight * 0.05, alignment: .top)
-                    if outfitImg?.image == nil {
-                        ChooseOutfit(image: outfitImg, onUploadPicture: onUploadPic)
+        ZStack {
+            VStack {
+                Text("Upload your outfit")
+                    .font(.system(size:30.0))
+                    .bold()
+                    .frame(height: deviceHeight * 0.05, alignment: .top)
+                if outfitImg?.image == nil {
+                    ChooseOutfit(image: outfitImg, onUploadPicture: onUploadPic)
+                } else {
+                    if isCurrentlyRated == false {
+                        ConfirmOutfit(image: outfitImg, rate: rateOutfit, retake: retakeOutfit)
                     } else {
-                        if !isCurrentlyRated {
-                            ConfirmOutfit(image: outfitImg, rate: rateOutfit, retake: retakeOutfit)
-                        } else {
-                           // rating result
-                        }
-                    }
-                }
-                .sheet(isPresented: $shouldShowImagePicker) {
-                    ImagePicker(sourceType: .photoLibrary) { image in
-                        self.outfitImg.image = Image(uiImage: outfitImg?.image)
-                    }
-                }
-                .actionSheet(isPresented: $shouldShowActionSheet) { () -> ActionSheet in
-                        ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
-                            self.shouldShowImagePicker = true
-                            self.shouldShowCamera = true
-                        }), ActionSheet.Button.default(Text("Photo Library"), action: {
-                            self.shouldShowImagePicker = true
-                            self.shouldShowCamera = false
-                        }), ActionSheet.Button.cancel()])
+                        RatingResult(image: outfitImg, result: rating, save: saveOutfit, retake: retakeOutfit)
                     }
                 }
             }
+            .sheet(isPresented: $shouldShowImagePicker) {
+                ImagePicker(sourceType: .photoLibrary) { image in
+                    self.outfitImg?.image = Image(uiImage: image)
+                }
+            }
+            .actionSheet(isPresented: $shouldShowActionSheet) { () -> ActionSheet in
+                    ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                        self.shouldShowImagePicker = true
+                        self.shouldShowCamera = true
+                    }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                        self.shouldShowImagePicker = true
+                        self.shouldShowCamera = false
+                    }), ActionSheet.Button.cancel()])
+                }
+            }
         }
-    }
+}
 
 struct UploadOutfit_Previews: PreviewProvider {
     static var previews: some View {

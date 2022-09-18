@@ -25,6 +25,7 @@
 		B763377B28D68B6900C30F6C /* ConfirmOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377A28D68B6900C30F6C /* ConfirmOutfit.swift */; };
 		B763377D28D6A70700C30F6C /* RatingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377C28D6A70700C30F6C /* RatingResult.swift */; };
 		B763378028D6A7EA00C30F6C /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763377F28D6A7EA00C30F6C /* Outfit.swift */; };
+		B7C4041028D6B3D7003B9FD3 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4040F28D6B3D7003B9FD3 /* SmallButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		B763377A28D68B6900C30F6C /* ConfirmOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOutfit.swift; sourceTree = "<group>"; };
 		B763377C28D6A70700C30F6C /* RatingResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingResult.swift; sourceTree = "<group>"; };
 		B763377F28D6A7EA00C30F6C /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		B7C4040F28D6B3D7003B9FD3 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				B763377428D6733B00C30F6C /* ImageSelector.swift */,
 				B763377628D676C400C30F6C /* LargeButton.swift */,
+				B7C4040F28D6B3D7003B9FD3 /* SmallButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				B763377928D6851100C30F6C /* ChooseOutfit.swift in Sources */,
 				B763376528D5CC9A00C30F6C /* Calendar.swift in Sources */,
 				B763377728D676C400C30F6C /* LargeButton.swift in Sources */,
+				B7C4041028D6B3D7003B9FD3 /* SmallButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotOrNot/Preview Content\"";
+				DEVELOPMENT_TEAM = 847Z4Z3KU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -521,6 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotOrNot/Preview Content\"";
+				DEVELOPMENT_TEAM = 847Z4Z3KU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
